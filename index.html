@@ -2,14 +2,14 @@
 <html lang="tr">
 <head>
 
-    <meta charset="UTF-8"> <!--karakter seti belirtme-->    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dokuz Eylül Üniversitesi </title> <!--web sitesinin içeriğini anlatan bölüm-->
-    <meta name="description" content="Dokuz Eylül Üniversitesi resmi web sitesi"> <!--web sitesinin içeriğini anlatan bölüm-->
-    <meta name="keywords" content="Dokuz Eylül Üniversitesi, DEÜ, üniversite, eğitim, araştırma"> <!--web sitesinin içeriğini anlatan bölüm-->
-    <meta name="googlebot" content="noarchive"> <!--web sitesinin içeriğini anlatan bölüm-->
-    <meta name="revisit after" content="1 days"> <!--web sitesinin içeriğini anlatan bölüm-->
-    <meta name="copyright" content="2025 - 2026 Dokuz Eylül Üniversitesi"> <!--web sitesinin içeriğini anlatan bölüm-->
+    <meta charset="UTF-8"> <!--Karakter kodlaması: UTF-8-->    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Mobil cihazlarda uyumlu görüntüleme-->
+    <title>Dokuz Eylül Üniversitesi </title> <!--Tarayıcı sekmesinde gösterilen sayfa başlığı-->
+    <meta name="description" content="Dokuz Eylül Üniversitesi resmi web sitesi"> <!--Arama motoru sonuçları için kısa açıklama-->
+    <meta name="keywords" content="Dokuz Eylül Üniversitesi, DEÜ, üniversite, eğitim, araştırma"> <!--Arama motorları için ilgili anahtar kelimeler-->
+    <meta name="googlebot" content="noarchive"> <!--Google tarafından sayfanın arşivlenmemesi-->
+    <meta name="revisit after" content="1 days"> <!--Google botunun sayfayı yeniden ziyaret etme sıklığı-->
+    <meta name="copyright" content="2025 - 2026 Dokuz Eylül Üniversitesi"> <!--Web sitesinin telif hakkı bilgisi-->
 
 </head>
 <body>
@@ -29,10 +29,86 @@
     <i> Italic</i> <!--metni italik yapma-->
     <strong>Bu metin önemli</strong> <!--metni kalın yapma-->
     <em>Bu metin vurgulanmış</em> <!--metni italik yapma-->
-    <br> <img src="./img/resim.jpg" alt="DEÜ Logosu" width = 1500px height = 1500px > <!--resim ekleme. src kaynak demek. br alta alır. alt olunca resimlenir. width ve height ile boyutları belirtebilirsiniz. width uzunluk height yükseklik. ne kadar büyütürsen o kdaar alan kaplar. bakarken de resimlerin boyutlarını göz alarak yapacaksın-->
+    <br> <img src="./img/resim.jpg" alt="DEÜ Logosu" width = 1500px height = 1500px > <!--resim ekleme. src kaynak demek. br alta alır. alt olunca resimlenir. width ve height ile boyutları belirtebilirsiniz. width genişlik height yükseklik. ne kadar büyütürsen o kdaar alan kaplar. bakarken de resimlerin boyutlarını göz alarak yapacaksın-->
     <br> <img src="https://picsum.photos/seed/picsum/200/300">
+    <h1 id="başlık1"> Sırasız liste </h1><!--sırasız liste oluşturma-->
+    <ul>       
+    <li>Birinci madde</li> <!--liste maddesi-->
+        <li>İkinci madde</li>
+        <li>Üçüncü madde</li>
+    </ul>
+    <h1>Sıralı liste</h1>
+    <ol>    
+     <li>Liste elemanı 1 </li>
+     <li>Liste Elemanı 2 </li>
+    </ol>
+
+    <a href="http://www.deu.edu.tr">D.E.U  Bu bir linktir </a>
+    <P>iLETİŞİM SAYFASI</P>
+    <p><a href="index.html">Geri dön </a> </p>
+    <a href = "iletişim.html">İletişim sayfası</a>
+    <a href = "#başlık1">Başa dön </a>
+    <a href="logo.rar">indirmek için tıklayın</a>
+    <a href="mailtto@gmail.com">E-posta gönder</a>
+    <a href ="https://deu.edu.tr" target="_blank" rel="DEU sayfası linki"> <img src = "https://picsum.photos/seed/picsum/200/300"></a>
+    <table border = "1"> <!--tablo oluşturma, border tabloya çerçeve ekler-->
+        <tr>
+            <th>adı</th> <!--tablo başlığı, 3 tane sütun olmak zorunda-->
+            <th>soyadı</th>
+            <th>üniversite</th>
+        </tr>
+        <tr><!--satır-->
+            <td>can </td> <!--sütunn, 3 tane sütun olmak zorunda , th ve td eşit olmak zorunda-->
+            <td>aydın</td>
+            <td>Deu</td>
+        </tr>
+        <tr>
+            <td colspan = "3">sonuç </td>
+        </tr>
+        <tr>
+            <td colspan = "2">can aydın</td> <!--1 satır birleştirme-->
+            <td>Deu</td>
+        </tr>
+    </table>
+    <iframe src ="" width ="%100" height="%100" frameborder="0"> </iframe> <!--başka bir web sayfasını gömme, src içine gömmek istediğin sayfanın linkini yazacaksın-->
+    <form action="gonder.js" method="POST"> <!--form oluşturma, içine input ekleyebilirsin-->
+        <label for="adi">Adınız:</label>
+          <input type="text" id="adi" name="adi" placeholder="Adınızı giriniz" maxlength="255" disable ="disable" > <!--kullanıcıdan metin girişi alma, placeholder içine yazdığın yazı inputun içinde gözükür-->
+          <label for="soyadi">Soyadınız:</label>
+          <input type ="text" id="soyadi" name="soyadi" placeholder="Soyadınızı giriniz" maxlength="255" >>
+          <input type="hidden" id="gelen_ip_address"> <!--görünmez input, gizli veri göndermek istediğinde kullanılır-->
+          <input type ="password" id="sifre"> <!--şifre girişi için input, yazdığın karakterler yerine yıldız koyar-->
+          <input type="checkbox" id="secim"> <!--seçim kutusu, tik atmak için kullanılır-->
+          <label>canva</label>
+          <input type="radio" id=" kadın" name="cinsiyet" value="kadın"> <!--seçim kutusu, tik atmak için kullanılır-->
+          <label>kadın</label>
+          <input type="radio" id=" erkek" name="cinsiyet" value="erkek"> <!--seçim kutusu, tik atmak için kullanılır-->
+          <label>erkek</label>
+          <label>adres </label>
+          <textarea></textarea> <!--birden fazla satır girişi için kullanılır-->
+          <select id="secenek"> <!--açılır menü oluşturma-->
+            <option id="seçenek1" value="1">Seçenek 1</option> <!--açılır menü seçenekleri-->
+            <option id="secenek2" value="2">Seçenek 2</option>
+            <option id="secenek3" value="3">Seçenek 3</option>
+          </select>
+          <input type ="submit" value="kaydet"> <!--formu göndermek için kullanılır-->
+          <input type="reset" value="temizle"> <!--formu sıfırlamak için kullanılır-->
+          <input type="date">
+          <input type="color">
+          <input type ="email">
+          <input type="number" min="1" max="50">
+          <input type="range" min="0" max="100" step="10">
+          <input type="file"> <!--dosya yüklemek için kullanılır-->
+          <input type="url" pattern="https://.+"> <!--url girişi için kullanılır-->
+          
 
 
+
+
+
+
+
+    </form>
 </body>
 
 </html>
