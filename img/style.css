@@ -1,0 +1,70 @@
+/*seçiciler : selectors */
+/*4- Evrensel seçici : universal selector   * evrensel seçici olarak kullanılır. tüm elementleri seçer.*/
+*{
+    color: white;
+    background-color: gray;
+    font-family: 'Lucida Console', Monaco, monospace;
+}
+
+
+
+body()
+
+1- Etiket (tag) seçicileri : element selector*/
+h1,h2{
+
+    color: blue;
+    background-color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+/*2- Sınıf (class) seçicileri : class selector   . clas seçicisi olarak kullanılır. ana sayfada class olarak atanır. en çok id ve bu kullanılır.*/
+.baslik{
+    color: red;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*3- Kimlik (id) seçicileri : id selector   # id seçicisi olarak kullanılır. ana sayfada id olarak atanır*/
+#paragraf{
+    color: green;
+    background-color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45px;
+}
+
+/*5- torun seçiciler : descendant selector   torun seçicisi olarak kullanılır. bir elementin içinde bulunan diğer elementleri seçmek için kullanılır. */
+div li {
+    color: purple;
+    background-color: pink;
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+/*6- çocuk seçiciler : child selector   çocuk seçicisi olarak kullanılır. bir elementin sadece bir altındaki elementleri seçmek için kullanılır. */
+div > p {
+    color: orange;
+    background-color: lightblue;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+/*7- bitişik seçiciler : adjacent sibling selector   bitişik seçici olarak kullanılır. bir elementin hemen ardından gelen kardeş elementleri seçmek için kullanılır. */
+h2 + p {
+    color: brown;
+    background-color: lightgreen;
+    font-family: 'Georgia', serif;
+}
+
+/*8- özellik seçiciler : attribute selector   özellik seçicisi olarak kullanılır. bir elementin belirli bir özelliğe sahip olup olmadığını kontrol etmek için kullanılır. */
+a[href] {
+    color: cyan;
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+input[type="text"] {
+    color: magenta;
+    background-color: lightgray;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+ul li {list-style-type:  none;} /*liste işaretlerini kaldırmak için kullanılır.*/
+a link {text-decoration: none;} /*linklerin altını çizmek için kullanılır. none değeri ile altını çizmez.*/
+

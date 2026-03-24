@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" manifest = "cache.manifest">  <!--Dil belirtme: Türkçe , cache sayfanın hızını artırır.-->
 <head>
 
     <meta charset="UTF-8"> <!--Karakter kodlaması: UTF-8-->    
@@ -10,7 +10,7 @@
     <meta name="googlebot" content="noarchive"> <!--Google tarafından sayfanın arşivlenmemesi-->
     <meta name="revisit after" content="1 days"> <!--Google botunun sayfayı yeniden ziyaret etme sıklığı-->
     <meta name="copyright" content="2025 - 2026 Dokuz Eylül Üniversitesi"> <!--Web sitesinin telif hakkı bilgisi-->
-
+<link href = "style.css" rel="stylesheet"> <!--Harici CSS dosyası ekleme-->
 </head>
 <body>
 
@@ -100,7 +100,9 @@
           <input type="range" min="0" max="100" step="10">
           <input type="file"> <!--dosya yüklemek için kullanılır-->
           <input type="url" pattern="https://.+"> <!--url girişi için kullanılır-->
-          <div id=" header"> <!--bütün satırı(blok seviyesinde) kaplar. inputlar inline dır--> 
+          
+    </form>
+    <div id=" header"> <!--bütün satırı(blok seviyesinde) kaplar. inputlar inline dır--> 
              <p>Bu bir header</p>
           </div>
         <div id="footer">
@@ -137,7 +139,11 @@
         <video autoplay loop="loop"> <!--video ekleme, autoplay otomatik oynatma, loop döngü, muted sessiz-->
           <source src="video.mp4" type="video/mp4"> <!--video ekleme, controls video kontrol butonlarını gösterir-->
         </video>
-    </form>
-</body>
+
+        <img src = "../img/resim_1024px.jpg" sizes="1024px 640px" alt="DEÜ Logosu" width = 1500px height = 1500px > <!--resim ekleme. src kaynak demek. br alta alır. alt olunca resimlenir. width ve height ile boyutları belirtebilirsiniz. width genişlik height yükseklik. ne kadar büyütürsen o kdaar alan kaplar. bakarken de resimlerin boyutlarını göz alarak yapacaksın. bunu kaandan al bu satırı-->
+       Cascading Style Sheets (CSS) ile ilgili örnekler:
+
+
+    </body>
 
 </html>
