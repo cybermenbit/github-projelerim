@@ -100,14 +100,43 @@
           <input type="range" min="0" max="100" step="10">
           <input type="file"> <!--dosya yüklemek için kullanılır-->
           <input type="url" pattern="https://.+"> <!--url girişi için kullanılır-->
-          
-
-
-
-
-
-
-
+          <div id=" header"> <!--bütün satırı(blok seviyesinde) kaplar. inputlar inline dır--> 
+             <p>Bu bir header</p>
+          </div>
+        <div id="footer">
+            <p>Bu bir footer</p>
+        </div>
+        <header>
+          <p>Bu bir header</p>
+        </header><!-- arama botları için hiçbir farkı yok. -->
+        <section>
+          <p>Bu bir section</p>
+        </section>
+        <aside>
+          <p>Bu bir aside</p>
+        </aside>
+        <nav>
+          <p>Bu bir nav</p>
+        </nav>
+        <footer>
+          <p>Bu bir footer</p>  
+        </footer>
+        <details>
+          <p>Bu detayın içeriği</p>
+        </details>
+        <article>
+          <p>Bu bir article</p>
+        </article>
+        <summary>
+          <p>Bu bir summary</p>
+        </summary>
+        <figure>
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="DEÜ Logosu" width = 1500px height = 1500px > <!--resim ekleme. src kaynak demek. br alta alır. alt olunca resimlenir. width ve height ile boyutları belirtebilirsiniz. width genişlik height yükseklik. ne kadar büyütürsen o kdaar alan kaplar. bakarken de resimlerin boyutlarını göz alarak yapacaksın-->
+         <figcaption>Bu bir figcaption</figcaption> <!--figure içindeki resmin açıklaması-->
+        </figure>
+        <video autoplay loop="loop"> <!--video ekleme, autoplay otomatik oynatma, loop döngü, muted sessiz-->
+          <source src="video.mp4" type="video/mp4"> <!--video ekleme, controls video kontrol butonlarını gösterir-->
+        </video>
     </form>
 </body>
 
