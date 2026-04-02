@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="tr" manifest = "cache.manifest">  <!--Dil belirtme: Türkçe , cache sayfanın hızını artırır.-->
-<head>
+<!DOCTYPE html> <!--HTML5 standart belirtimi-->
+<html lang="tr">  <!--Sayfa dili: Türkçe-->
+<head> <!--Sayfanın başlık bölümü, tarayıcı tarafından görüntülenmeyen meta bilgileri barındırır-->
 
     <meta charset="UTF-8"> <!--Karakter kodlaması: UTF-8-->    
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Mobil cihazlarda uyumlu görüntüleme-->
@@ -10,140 +10,145 @@
     <meta name="googlebot" content="noarchive"> <!--Google tarafından sayfanın arşivlenmemesi-->
     <meta name="revisit after" content="1 days"> <!--Google botunun sayfayı yeniden ziyaret etme sıklığı-->
     <meta name="copyright" content="2025 - 2026 Dokuz Eylül Üniversitesi"> <!--Web sitesinin telif hakkı bilgisi-->
-<link href = "style.css" rel="stylesheet"> <!--Harici CSS dosyası ekleme-->
-</head>
-<body>
+<link rel="stylesheet" href="style.css"> <!--Stil tasarımı için harici CSS dosyası bağlama-->
+</head> <!--Başlık bölümünün kapanması-->
+<body> <!--Sayfanın gövde bölümü, kullanıcıya gösterilebilir tüm içeriği barındırır-->
 
-    <p>Bu bir paragraftır</p><!--paragraf oluşturma-->
-    <p>Bu da başka bir paragraftır</p><!--paragraf oluşturma-->  
-    <h1>Bu bir başlıktır</h1><!--başlık oluşturma en büyük 28.pixel -->
-    <h2>Bu bir başlıktır</h2><!--başlık oluşturma en büyük 24.pixel -->
-    <h3>Bu bir başlıktır</h3><!--başlık oluşturma en büyük 18.pixel -->
-    <h4>Bu bir başlıktır</h4><!--başlık oluşturma en büyük 16.pixel -->
-    <h5>Bu bir başlıktır</h5><!--başlık oluşturma en büyük 14.pixel -->
-    <pre>Bu bir önceden biçimlendirilmiş metindir</pre><!--metni olduğu gibi gösterme, html de boşluk yok enter koyunca boşluk görevi görür. burda boşluk dahil başına ya da sonuna oluyor-->
-    <abbr title="Dokuz Eylül Üniversitesi">DEÜ</abbr><!--kısaltmaların açılımını gösterme-->
-    H<sub>2</sub>0 Bu bir alt simgedir</sub><!--metni alt simge yapma-->
-    x<sup>2</sup> y Bu bir üst simgedir</sup><!--metni üst simge yapma-->
-    <b> Bolt</b> <!--metni kalın yapma-->
-    <i> Italic</i> <!--metni italik yapma-->
-    <strong>Bu metin önemli</strong> <!--metni kalın yapma-->
-    <em>Bu metin vurgulanmış</em> <!--metni italik yapma-->
-    <br> <img src="./img/resim.jpg" alt="DEÜ Logosu" width = 1500px height = 1500px > <!--resim ekleme. src kaynak demek. br alta alır. alt olunca resimlenir. width ve height ile boyutları belirtebilirsiniz. width genişlik height yükseklik. ne kadar büyütürsen o kdaar alan kaplar. bakarken de resimlerin boyutlarını göz alarak yapacaksın-->
-    <br> <img src="https://picsum.photos/seed/picsum/200/300">
-    <h1 id="başlık1"> Sırasız liste </h1><!--sırasız liste oluşturma-->
-    <ul>       
-    <li>Birinci madde</li> <!--liste maddesi-->
-        <li>İkinci madde</li>
-        <li>Üçüncü madde</li>
+    <p>Bu bir paragraftır</p><!--Metin paragrafı-->
+    <p>Bu da başka bir paragraftır</p><!--Başka bir metin paragrafı-->  
+    <h1>Bu bir başlıktır</h1><!--Ana başlık, en büyük boyut-->
+    <h2>Bu bir başlıktır</h2><!--İkinci seviye başlık-->
+    <h3>Bu bir başlıktır</h3><!--Üçüncü seviye başlık-->
+    <h4>Bu bir başlıktır</h4><!--Dördüncü seviye başlık-->
+    <h5>Bu bir başlıktır</h5><!--Beşinci seviye başlık-->
+    <pre>Bu bir önceden biçimlendirilmiş metindir</pre><!--Boşluk ve formatı koruyan metin-->
+    <abbr title="Dokuz Eylül Üniversitesi">DEÜ</abbr><!--Kısaltmanın açılımını tanımlama-->
+    H<sub>2</sub>O <!--Su molekülü, alt simge örneği-->
+    x<sup>2</sup> <!--Üssü gösterme, matematiksel işlem örneği-->
+    <b>Bolt</b> <!--Stilistik olarak kalın yazım-->
+    <i>Italic</i> <!--Stilistik olarak eğilmiş yazım-->
+    <strong>Bu metin önemli</strong> <!--Anlam açısından önemli metin . Tarayıcı tarafından genellikle kalın yazılır-->
+    <em>Bu metin vurgulanmış</em> <!--Vurgulanmış metin . tarayıcı tarafından genellikle italik yazılır-->
+    <br> <img src="./img/resim.jpg" alt="DEÜ Logosu" width="1500" height="1500"> <!--Local klasörden resim ekleme-->
+    <br> <img src="https://picsum.photos/seed/picsum/200/300" alt="Rastgele resim"> <!--Harici URL'den resim ekleme-->
+    <h1 id="başlık1">Sırasız liste</h1><!--Sırasız listeyi başlıklandırma-->
+    <ul> <!--Sırasız liste-->
+        <li>Birinci madde</li> <!--Liste öğesi-->
+        <li>İkinci madde</li> <!--Liste öğesi-->
+        <li>Üçüncü madde</li> <!--Liste öğesi-->
     </ul>
-    <h1>Sıralı liste</h1>
-    <ol>    
-     <li>Liste elemanı 1 </li>
-     <li>Liste Elemanı 2 </li>
+    <h1>Sıralı liste</h1> <!--Sıralı listeyi başlıklandırma-->
+    <ol>    <!--Sıralı liste-->
+        <li>Liste elemanı 1</li> <!--Sıralı liste öğesi-->
+        <li>Liste elemanı 2</li> <!--Sıralı liste öğesi-->
     </ol>
 
-    <a href="http://www.deu.edu.tr">D.E.U  Bu bir linktir </a>
-    <P>iLETİŞİM SAYFASI</P>
-    <p><a href="index.html">Geri dön </a> </p>
-    <a href = "iletişim.html">İletişim sayfası</a>
-    <a href = "#başlık1">Başa dön </a>
-    <a href="logo.rar">indirmek için tıklayın</a>
-    <a href="mailtto@gmail.com">E-posta gönder</a>
-    <a href ="https://deu.edu.tr" target="_blank" rel="DEU sayfası linki"> <img src = "https://picsum.photos/seed/picsum/200/300"></a>
-    <table border = "1"> <!--tablo oluşturma, border tabloya çerçeve ekler-->
-        <tr>
-            <th>adı</th> <!--tablo başlığı, 3 tane sütun olmak zorunda-->
-            <th>soyadı</th>
-            <th>üniversite</th>
+    <a href="http://www.deu.edu.tr">D.E.U</a> <!--Dış siteye bağlantı-->
+    <p>İLETİŞİM SAYFASI</p> <!--Sayfa bölümü başlığı-->
+    <p><a href="index.html">Geri dön</a></p> <!--Aynı sayfaya iç bağlantı-->
+    <a href="iletişim.html">İletişim sayfası</a> <!--Başka HTML dosyasına bağlantı-->
+    <a href="#başlık1">Başa dön</a> <!--Sayfanın belirli bölümüne çıpa bağlantısı-->
+    <a href="logo.rar">indirmek için tıklayın</a> <!--Dosya indirme bağlantısı-->
+    <a href="mailto:@gmail.com">E-posta gönder</a> <!--E-posta gönderme bağlantısı-->
+    <a href ="https://deu.edu.tr" target="_blank" rel="DEU sayfası linki"> <!--Yeni sekmede açılan harici site bağlantısı, target="_blank" yeni sekme açar-->
+    <table border = "1"> <!--Tablo oluşturma, border="1" tabloya 1 piksel çerçeve ekler-->
+        <tr> <!--Tablo satırı-->
+            <th>adı</th> <!--Tablo başlık hücresi, 1. sütun-->
+            <th>soyadı</th> <!--Tablo başlık hücresi, 2. sütun-->
+            <th>üniversite</th> <!--Tablo başlık hücresi, 3. sütun-->
         </tr>
-        <tr><!--satır-->
-            <td>can </td> <!--sütunn, 3 tane sütun olmak zorunda , th ve td eşit olmak zorunda-->
-            <td>aydın</td>
-            <td>Deu</td>
+        <tr> <!--Tablo satırı, veri satırı 1-->
+            <td>can </td> <!--Tablo veri hücresi, 1. sütun-->
+            <td>aydın</td> <!--Tablo veri hücresi, 2. sütun-->
+            <td>Deu</td> <!--Tablo veri hücresi, 3. sütun-->
         </tr>
-        <tr>
-            <td colspan = "3">sonuç </td>
+        <tr><!--Tablo satırı, veri satırı 2-->
+            <td colspan = "3">sonuç </td> <!--Tablo hücresi, 3 sütun birleştirildi-->
         </tr>
-        <tr>
-            <td colspan = "2">can aydın</td> <!--1 satır birleştirme-->
-            <td>Deu</td>
+        <tr><!--Tablo satırı, veri satırı 3-->
+            <td colspan = "2">can aydın</td> <!--Tablo hücresi, 2 sütun birleştirildi-->
+            <td>Deu</td>  <!--Tablo veri hücresi-->
+            
         </tr>
     </table>
-    <iframe src ="" width ="%100" height="%100" frameborder="0"> </iframe> <!--başka bir web sayfasını gömme, src içine gömmek istediğin sayfanın linkini yazacaksın-->
-    <form action="gonder.js" method="POST"> <!--form oluşturma, içine input ekleyebilirsin-->
-        <label for="adi">Adınız:</label>
-          <input type="text" id="adi" name="adi" placeholder="Adınızı giriniz" maxlength="255" disable ="disable" > <!--kullanıcıdan metin girişi alma, placeholder içine yazdığın yazı inputun içinde gözükür-->
-          <label for="soyadi">Soyadınız:</label>
-          <input type ="text" id="soyadi" name="soyadi" placeholder="Soyadınızı giriniz" maxlength="255" >>
+    <iframe src ="" width ="%100" height="%100" frameborder="0"></iframe> <!--Harici web sayfasını gömme, src içine gömmek istenen sayfanın URL'sini yazılır-->
+    <form action="gonder.js" method="POST"> <!--Form oluşturma, action göndereceği sayfayı, method=POST veriyi gizli şekilde gönderir-->
+        <label for="adi">Adınız:</label> <!--Form etiketi, input ile bağlanır-->
+          <input type="text" id="adi" name="adi" placeholder="Adınızı giriniz" maxlength="255" disable ="disable" > <!--Metin girişi, disable devre dışı bırakır, maxlength karakter sınırı belirler-->
+          <label for="soyadi">Soyadınız:</label> <!--Form etiketi, input ile bağlanır-->
+          <input type ="text" id="soyadi" name="soyadi" placeholder="Soyadınızı giriniz" maxlength="255"> <!--Metin girişi input-->
           <input type="hidden" id="gelen_ip_address"> <!--görünmez input, gizli veri göndermek istediğinde kullanılır-->
-          <input type ="password" id="sifre"> <!--şifre girişi için input, yazdığın karakterler yerine yıldız koyar-->
-          <input type="checkbox" id="secim"> <!--seçim kutusu, tik atmak için kullanılır-->
-          <label>canva</label>
-          <input type="radio" id=" kadın" name="cinsiyet" value="kadın"> <!--seçim kutusu, tik atmak için kullanılır-->
-          <label>kadın</label>
-          <input type="radio" id=" erkek" name="cinsiyet" value="erkek"> <!--seçim kutusu, tik atmak için kullanılır-->
-          <label>erkek</label>
-          <label>adres </label>
-          <textarea></textarea> <!--birden fazla satır girişi için kullanılır-->
-          <select id="secenek"> <!--açılır menü oluşturma-->
-            <option id="seçenek1" value="1">Seçenek 1</option> <!--açılır menü seçenekleri-->
-            <option id="secenek2" value="2">Seçenek 2</option>
-            <option id="secenek3" value="3">Seçenek 3</option>
+          <input type ="password" id="sifre"> <!--Şifre girişi input, karakterler yıldız ile maskelenir-->
+          <input type="checkbox" id="secim"> <!--Checkbox input, bir veya birden fazla seçim yapıldığında kullanılır-->
+          <label>Cinsiyet:</label> <!--Cinsiyet seçim grubu etiketi-->
+          <input type="radio" id="kadın" name="cinsiyet" value="kadın"> <!--Radio button input, tek seçim yapılır, aynı isimli olanlar gruptur-->
+          <label>kadın</label> <1-- nsiyet seçeneği etiketi-->
+          <input type="radio" id="erkek" name="cinsiyet" value="erkek"> <!--Radio button input, cinsiyet grubunun 2. seçeneği-->
+          <label>erkek</label> <!--Cinsiyet seçeneği etiketi-->
+          <label>Adres:</label> <!--Adres girilecek alanın etiketi-->
+          <textarea></textarea> <!--Çok satırlı metin girişi alanı-->
+          <select id="secenek"> <!--Açılır menü oluşturma, seçeneklerden bir seçim yapılır-->
+            <option id="seçenek1" value="1">Seçenek 1</option> <!--Açılır menü seçeneği 1-->
+            <option id="secenek2" value="2">Seçenek 2</option> <!--Açılır menü seçeneği 2-->
+            <option id="secenek3" value="3">Seçenek 3</option> <!--Açılır menü seçeneği 3-->
           </select>
-          <input type ="submit" value="kaydet"> <!--formu göndermek için kullanılır-->
-          <input type="reset" value="temizle"> <!--formu sıfırlamak için kullanılır-->
-          <input type="date">
-          <input type="color">
-          <input type ="email">
-          <input type="number" min="1" max="50">
-          <input type="range" min="0" max="100" step="10">
-          <input type="file"> <!--dosya yüklemek için kullanılır-->
-          <input type="url" pattern="https://.+"> <!--url girişi için kullanılır-->
+          <input type ="submit" value="kaydet"> <!--Form gönderme butonu, onClick form verilerini action'a gönderir-->
+          <input type="reset" value="temizle"> <!--Form sıfırlama butonu, tüm form verilerini temizler-->
+          <input type="date"> <!--Tarih girişi input, takvim arayüzü sağlar-->
+          <input type="color"> <!--Renk seçici input, renk paletini açar-->
+          <input type ="email"> <!--E-mail girişi input, format kontrolü yapar-->
+          <input type="number" min="1" max="50"> <!--Sayı girişi input, min=1 en düşük, max=50 en yüksek değer-->
+          <input type="range" min="0" max="100" step="10"> <!--Aralık kaydırıcı input, step=10 adım sayısı-->
+          <input type="file"> <!--Dosya yükleme input, bilgisayardan dosya seçimi sağlar-->
+          <input type="url" pattern="https://.+"> <!--URL girişi input, https:// ile başlaması gerekir-->
           
     </form>
-    <div id=" header"> <!--bütün satırı(blok seviyesinde) kaplar. inputlar inline dır--> 
-             <p>Bu bir header</p>
+    <div id="header"> <!--Blok seviyesinde bölüm, genişlik 100%, alto satırı kaplar, CSS ile biçimlendirebilir--> 
+            <p id="kirmizibaslik"> Header </p>
           </div>
-        <div id="footer">
+          <div id="content"> <!-- Ana içerik bölümü -->
+        <p> Content </p>
+    </div>
+        <div id="footer"> <!--Blok seviyesinde bölüm, sayfa alt bölümü tanımlaması-->
             <p>Bu bir footer</p>
         </div>
-        <header>
+        <header> <!--HTML5 Semantic etiketi, sayfanın başlık bölümü, arama botları için yapısal bilgi sağlar-->
           <p>Bu bir header</p>
         </header><!-- arama botları için hiçbir farkı yok. -->
-        <section>
+        <section> <!--HTML5 Semantic etiketi, sayfa içeriğini tematik bölümlere ayırır-->
           <p>Bu bir section</p>
         </section>
-        <aside>
+        <aside> <!--HTML5 Semantic etiketi, asıl içerikle ilgili yan bilgiler içerir (sidebar gibi)-->
           <p>Bu bir aside</p>
         </aside>
-        <nav>
+        <nav> <!--HTML5 Semantic etiketi, sayfanın ana navigasyon bağlantılarını içerir-->
           <p>Bu bir nav</p>
         </nav>
-        <footer>
+        <footer> <!--HTML5 Semantic etiketi, sayfanın alt bilgisi (telif hakkı, iletişim vb.)-->
           <p>Bu bir footer</p>  
         </footer>
-        <details>
+        <details> <!--HTML5 Semantic etiketi, genişletilebilir/daraltılabilir bölüm (açılır paneli gibi)-->
           <p>Bu detayın içeriği</p>
         </details>
-        <article>
+        <article> <!--HTML5 Semantic etiketi, bağımsız ve yeniden kullanılabilir içerik (yazı, haber makalesi vb.)-->
           <p>Bu bir article</p>
         </article>
-        <summary>
+        <summary> <!--HTML5 Semantic etiketi, details öğesinin başlığı, tıklanabilir özet-->
           <p>Bu bir summary</p>
         </summary>
-        <figure>
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="DEÜ Logosu" width = 1500px height = 1500px > <!--resim ekleme. src kaynak demek. br alta alır. alt olunca resimlenir. width ve height ile boyutları belirtebilirsiniz. width genişlik height yükseklik. ne kadar büyütürsen o kdaar alan kaplar. bakarken de resimlerin boyutlarını göz alarak yapacaksın-->
+        <figure> <!--HTML5 Semantic etiketi, kendi başına anlamlı içerik (resim, diyagram vb.)-->
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="DEÜ Logosu" width="1500px" height="1500px"> <!--Figure içine resim ekleme, alt etiketi erişilebilirlik için yazı tarafından okunan açıklama-->
          <figcaption>Bu bir figcaption</figcaption> <!--figure içindeki resmin açıklaması-->
         </figure>
-        <video autoplay loop="loop"> <!--video ekleme, autoplay otomatik oynatma, loop döngü, muted sessiz-->
-          <source src="video.mp4" type="video/mp4"> <!--video ekleme, controls video kontrol butonlarını gösterir-->
+        <video autoplay loop="loop" controls> <!--Video ekleme, autoplay otomatik oynatma, loop döngü, controls kontrol butonlarını gösterir-->
+          <source src="video.mp4" type="video/mp4"> <!--Video kaynak dosyası, mp4 formatı-->
         </video>
 
-        <img src = "../img/resim_1024px.jpg" sizes="1024px 640px" alt="DEÜ Logosu" width = 1500px height = 1500px > <!--resim ekleme. src kaynak demek. br alta alır. alt olunca resimlenir. width ve height ile boyutları belirtebilirsiniz. width genişlik height yükseklik. ne kadar büyütürsen o kdaar alan kaplar. bakarken de resimlerin boyutlarını göz alarak yapacaksın. bunu kaandan al bu satırı-->
+        <img src="../img/resim_1024px.jpg" sizes="1024px 640px" alt="DEÜ Logosu" width="1500px" height="1500px"> <!--Responsive resim, sizes attribute farklı ekran boyutları için resim seçer-->
        Cascading Style Sheets (CSS) ile ilgili örnekler:
+  <!-- Cascading Style Sheet CSS, HTML elementlerinin görünümünü ve düzenini tanımlamak için kullanılan bir stil dilidir. CSS, web sayfalarının tasarımını ve düzenini kontrol etmek için kullanılır. CSS, HTML ile birlikte kullanılarak web sayfalarının görsel olarak çekici ve kullanıcı dostu hale getirilmesini sağlar. CSS, renkler, yazı tipleri, kenarlıklar, arka planlar ve daha fazlasını kontrol etmek için kullanılabilir. CSS, web geliştiricilerine web sayfalarını daha hızlı ve kolay bir şekilde tasarlama imkanı sunar. -->
 
 
-    </body>
+    </body> <!--Gövde bölümünün kapanması-->
 
-</html>
+</html> <!--HTML belgesinin kapanması-->
