@@ -68,3 +68,97 @@ input[type="text"] {
 ul li {list-style-type:  none;} /*liste işaretlerini kaldırmak için kullanılır.*/
 a link {text-decoration: none;} /*linklerin altını çizmek için kullanılır. none değeri ile altını çizmez.*/
 
+#yeni{
+    color: yellow !important; /*important değeri ile bu stil diğer stillerden daha öncelikli olur. diğer stiller bu stili geçemez.*/
+    line-height :30px; /*satır yüksekliği*/
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-style: italic; /*font stili*/
+    text-transform: uppercase; /*metni büyük harfe çevirir.*/
+    text-decoration: underline; /*metni altını çizer.*/
+    text-indent: 30px; /*metni içeri kaydırır.*/
+    text-align: center; /*metni ortalar.*/
+    vertical-align: middle; /*metni dikey olarak ortalar.*/
+    letter-spacing: 30px; /*harfler arasındaki boşluğu artırır.*/
+    text-shadow: 2px 2px 5px red; /*metne gölge ekler. ilk iki değer gölgenin x ve y eksenindeki kaymasını, üçüncü değer ise gölgenin bulanıklık yarıçapını belirtir. son değer ise gölgenin rengini belirtir.*/
+    
+}
+html{
+    background-color: lightgray;
+}
+body{
+    background-image: url(/img/resim.jpg) lightblue;
+    min-height: 1200px; /*minimum yükseklik*/
+    background-repeat: no-repeat; /*arka plan resminin tekrarlanmasını engeller.*/
+    background-attachment: fixed; /*arka plan resminin sayfa kaydırıldığında hareket etmesini engeller.*/
+    background-position: center; /*arka plan resminin konumunu belirler. center değeri ile resim sayfanın ortasına yerleştirilir.*/
+
+}
+/*Css kutu modeli: margin ve padding model
+margin: d1Ş boşluk elementin dışındaki boşlukları belirler. margin-top, margin-right, margin-bottom, margin-left şeklinde tek tek de tanımlanabilir.
+padding: iç boşlık elementin içindeki boşlukları belirler. padding-top, padding-right, padding-bottom, padding-left şeklinde tek tek de tanımlanabilir.*/
+
+#box{
+    background-color: aliceblue;
+}
+#box2{
+    background-color: lightcoral;
+    margin: 20px 120px 20px 120px; /*elementin dışındaki boşlukları belirler. tüm kenarlar için geçerlidir.*/
+    margin-top: 120px; /*elementin üstündeki boşluğu belirler.*/
+    margin-right: 120px; /*elementin sağındaki boşluğu belirler.*/
+    margin-bottom: 120px; /*elementin altındaki boşluğu belirler.*/
+    margin-left: 120px; /*elementin solundaki boşluğu belirler.
+        padding: 20px 120px 20px 120px; /*elementin içindeki boşlukları belirler. tüm kenarlar için geçerlidir.*/
+}
+#box3{
+    background-color: lightseagreen;
+    
+}
+
+
+html{
+margin: 0; /*tarayıcıların varsayılan olarak eklediği boşlukları kaldırmak için kullanılır.*/
+padding: 0; /*tarayıcıların varsayılan olarak eklediği boşlukları kaldırmak için kullanılır.*/
+}
+
+#box{
+background-color: aliceblue;
+padding:20px;
+
+}
+#box2{
+background-color: lightcoral;
+float: left;
+margin-left: 20px; /*elementin sol tarafa yaslanmasını sağlar. float: right; ise elementin sağ tarafa yaslanmasını sağlar. float: none; ise elementin normal akışına devam etmesini sağlar.*/
+}
+
+
+div{
+    background-color: lightseagreen;
+    width: 200px; /*elementin genişliğini belirler.*/
+    height: 200px; /*elementin yüksekliğini belirler.*/
+    border-radius: 15px 0px 15px 0px; /*elementin köşelerini yuvarlatır. 15px değeri ile köşeler 15 piksel yarıçapında yuvarlatılır.*/
+
+}
+
+#flex_kutu{
+    display: flex;
+    justify-content: center; /*flex container içindeki elemanların yatay olarak ortalanmasını sağlar. flex-start değeri ile elemanlar sola hizalanır. flex-end değeri ile elemanlar sağa hizalanır. space-between değeri ile elemanlar arasında eşit boşluk bırakılır. space-around değeri ile elemanlar arasında eşit boşluk bırakılır ve kenarlara da boşluk bırakılır.*/
+    align-items: center; /*flex container içindeki elemanların dikey olarak ortalanmasını sağlar. flex-start değeri ile elemanlar üst hizalanır. flex-end değeri ile elemanlar alt hizalanır. stretch değeri ile elemanlar container'ın yüksekliğine kadar uzatılır.*/
+
+    border : 2px solid black;
+    flex-direction: row; /*flex container içindeki elemanların yönünü belirler. row değeri ile elemanlar yatay olarak sıralanır. column değeri ile elemanlar dikey olarak sıralanır.*/
+}
+.flex_kutulsr{
+    background-color: lightcoral;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.alt_kutulsr{
+    background-color: lightseagreen;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
