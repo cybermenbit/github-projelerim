@@ -12,6 +12,7 @@
     <meta name="copyright" content="2025 - 2026 Dokuz Eylül Üniversitesi"> <!--Web sitesinin telif hakkı bilgisi-->
 <link rel="stylesheet" href="style.css"> <!--Stil tasarımı için harici CSS dosyası bağlama-->
 </head> <!--Başlık bölümünün kapanması-->
+<!-- Boşluk: head ile body arasındaki görsel/lojistik ayırma -->
 <body> <!--Sayfanın gövde bölümü, kullanıcıya gösterilebilir tüm içeriği barındırır-->
 
     <p>Bu bir paragraftır</p><!--Metin paragrafı-->
@@ -129,10 +130,8 @@
       </div>
 
     </div>
-
-
-
-        <div id="footer"> <!--Blok seviyesinde bölüm, sayfa alt bölümü tanımlaması-->
+    <!-- Boşluk: ana içerik ile footer arasındaki ayırma -->
+      <div id="footer"> <!--Blok seviyesinde bölüm, sayfa alt bölümü tanımlaması-->
             <p>Bu bir footer</p>
         </div>
         <header> <!--HTML5 Semantic etiketi, sayfanın başlık bölümü, arama botları için yapısal bilgi sağlar-->
@@ -168,10 +167,117 @@
         </video>
 
         <img src="../img/resim_1024px.jpg" sizes="1024px 640px" alt="DEÜ Logosu" width="1500px" height="1500px"> <!--Responsive resim, sizes attribute farklı ekran boyutları için resim seçer-->
-       Cascading Style Sheets (CSS) ile ilgili örnekler:
+       
+         <section id="merged-examples">
+        <h2>Ek Element Örnekleri</h2>
+
+        <!-- Abbreviation örneği: kısaltmaların açılımını title ile gösterir -->
+        <p>Kurumsal kısaltma: <abbr title="Dokuz Eylül Üniversitesi">DEÜ</abbr></p>
+
+        <!-- Aşağıdaki form; her alanın ne işe yaradığını açıklayan kısa yorumlar eklenmiştir. -->
+        <form id="examples-form">
+            <!-- Metin girişi: kısa yazı/isim için -->
+            <div>
+                <label for="ex-name">Adınız</label> <!-- for ile input eşleştirme erişilebilirlik sağlar -->
+                <input id="ex-name" type="text" name="ex-name" placeholder="Adınızı girin"> <!-- placeholder görsel yardım içindir -->
+            </div>
+
+            <!-- E-posta doğrulaması için type=email kullanılır; tarayıcı temel doğrulama yapar -->
+            <div>
+                <label for="ex-email">E-posta</label>
+                <input id="ex-email" type="email" name="ex-email" placeholder="ornek@ornek.com">
+            </div>
+
+            <!-- Şifre alanı: kullanıcı girdisi gizlenir -->
+            <div>
+                <label for="ex-password">Şifre</label>
+                <input id="ex-password" type="password" name="ex-password"> <!-- şifreler için kullanılır -->
+            </div>
+
+            <!-- Tarih seçici: tarayıcı takvim arayüzü sunar -->
+            <div>
+                <label for="ex-date">Tarih</label>
+                <input id="ex-date" type="date" name="ex-date"> <!-- yyyy-mm-dd formatı gönderilir -->
+            </div>
+
+            <!-- Renk inputu: renk paleti açar; örnek gösterim amaçlı -->
+            <div>
+                <label for="ex-color">Renk</label>
+                <input id="ex-color" type="color" name="ex-color"> <!-- hex kodu döndürür -->
+            </div>
+
+            <!-- Sayısal giriş: min/max ile aralık kısıtlanır -->
+            <div>
+                <label for="ex-number">Sayı (1-50)</label>
+                <input id="ex-number" type="number" name="ex-number" min="1" max="50"> <!-- step varsayılan 1 -->
+            </div>
+
+            <!-- Kaydırıcı: görsel aralık kontrolü sağlar -->
+            <div>
+                <label for="ex-range">Aralık</label>
+                <input id="ex-range" type="range" name="ex-range" min="0" max="100" step="10"> <!-- value okunarak gönderilir -->
+            </div>
+
+            <!-- Dosya yükleme: kullanıcı yerel dosya seçer -->
+            <div>
+                <label for="ex-file">Dosya yükle</label>
+                <input id="ex-file" type="file" name="ex-file"> <!-- enctype=form-data ile gönderilir -->
+            </div>
+
+            <!-- URL girişi: pattern veya type=url ile basit doğrulama -->
+            <div>
+                <label for="ex-url">Web adresi</label>
+                <input id="ex-url" type="url" name="ex-url" placeholder="https://example.com"> <!-- tarayıcı URL formatı doğrular -->
+            </div>
+
+            <!-- Gizli alan: form ile beraber gönderilen ancak kullanıcıya gösterilmeyen veri -->
+            <div>
+                <input id="ex-hidden" type="hidden" name="ex-hidden" value="gizli"> <!-- arka planda veri taşımak için -->
+            </div>
+
+            <!-- Radio (tek seçim) örneği: aynı name ile gruplanır -->
+            <fieldset>
+                <legend>Cinsiyet</legend>
+                <input type="radio" id="ex-kadin" name="ex-gender" value="kadin"><label for="ex-kadin">Kadın</label>
+                <input type="radio" id="ex-erkek" name="ex-gender" value="erkek"><label for="ex-erkek">Erkek</label>
+            </fieldset>
+
+            <!-- Checkbox (çoklu seçim) örneği -->
+            <div>
+                <input type="checkbox" id="ex-accept" name="ex-accept"><label for="ex-accept">Kabul ediyorum</label>
+            </div>
+
+            <!-- Çok satırlı metin girişi -->
+            <div>
+                <label for="ex-textarea">Adres</label>
+                <textarea id="ex-textarea" name="ex-textarea" rows="3"></textarea>
+            </div>
+
+            <!-- Seçim listesi (select) -->
+            <div>
+                <label for="ex-select">Seçenek</label>
+                <select id="ex-select" name="ex-select">
+                    <option value="1">Seçenek 1</option>
+                    <option value="2">Seçenek 2</option>
+                    <option value="3">Seçenek 3</option>
+                </select>
+            </div>
+
+            <!-- Gönder / temizle butonları; submit formu gönderir -->
+            <div>
+                <input type="submit" value="Gönder (örnek)">
+                <input type="reset" value="Temizle">
+            </div>
+        </form>
+    </section>
+
+    <!-- Cascading Style Sheet CSS, HTML elementlerinin görünümünü ve düzenini tanımlamak için kullanılan bir stil dilidir. CSS, web sayfalarının tasarımını ve düzenini kontrol etmek için kullanılır. CSS, HTML ile birlikte kullanılarak web sayfalarının görsel olarak çekici ve kullanıcı dostu hale getirilmesini sağlar. CSS, renkler, yazı tipleri, kenarlıklar, arka planlar ve daha fazlasını kontrol etmek için kullanılabilir. CSS, web geliştiricilerine web sayfalarını daha hızlı ve kolay bir şekilde tasarlama imkanı sunar. -->
+
+        Cascading Style Sheets (CSS) ile ilgili örnekler:
   <!-- Cascading Style Sheet CSS, HTML elementlerinin görünümünü ve düzenini tanımlamak için kullanılan bir stil dilidir. CSS, web sayfalarının tasarımını ve düzenini kontrol etmek için kullanılır. CSS, HTML ile birlikte kullanılarak web sayfalarının görsel olarak çekici ve kullanıcı dostu hale getirilmesini sağlar. CSS, renkler, yazı tipleri, kenarlıklar, arka planlar ve daha fazlasını kontrol etmek için kullanılabilir. CSS, web geliştiricilerine web sayfalarını daha hızlı ve kolay bir şekilde tasarlama imkanı sunar. -->
 
 
+    <!-- Boşluk: sayfa sonu açıklama/ayırma -->
     </body> <!--Gövde bölümünün kapanması-->
 
-</html> <!--HTML belgesinin kapanması-->
+  </html> <!--HTML belgesinin kapanması-->

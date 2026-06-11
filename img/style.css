@@ -1,164 +1,133 @@
-/*seçiciler : selectors */
-/*4- Evrensel seçici : universal selector   * evrensel seçici olarak kullanılır. tüm elementleri seçer.*/
-*{
-    color: white;
-    background-color: gray;
-    font-family: 'Lucida Console', Monaco, monospace;
+/* Seçiciler - selectors 
+1. Etiket (Tag) seçiciler */ /*bir elementin tümünü seçmek için kullanılır, etiketler direkt olarak yazılır*/
+h1 {
+    color: blue; /* Başlık yazı rengini mavi yapar. */
+    text-align: center; /* Başlık metnini yatayda ortalar. */
+    font-family: 'Times New Roman', Times, serif; /* Başlığın yazı tipini belirtir; yüklü olan ilk kullanılacak. */
+    font-size: 45px; /* Başlık yazı boyutunu piksel cinsinden ayarlar. */
+}
+
+/* 2. Sınıf (Class) seçiciler */ /*bir elemente birden fazla sınıf verilebilir, aynı sınıf birden fazla elemente verilebilir, sınıflar . ile seçilir*/
+.paragraf {
+    color: blueviolet; /* `.paragraf` sınıfına sahip öğelerin yazı rengini belirler. */
 }
 
 
-
-body()
-
-1- Etiket (tag) seçicileri : element selector*/
-h1,h2{
-
-    color: blue;
-    background-color: brown;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
-}
-/*2- Sınıf (class) seçicileri : class selector   . clas seçicisi olarak kullanılır. ana sayfada class olarak atanır. en çok id ve bu kullanılır.*/
-.baslik{
-    color: red;
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-}
-/*3- Kimlik (id) seçicileri : id selector   # id seçicisi olarak kullanılır. ana sayfada id olarak atanır*/
-#paragraf{
-    color: green;
-    background-color: yellow;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 45px;
+/* 3. ID seçiciler */ /*bir elemente tek bir id verilebilir, id'ler birbirinin aynısı olamaz, id'ler # ile seçilir*/
+#kirmizibaslik {
+    color: red; /* `id="kirmizibaslik"` olan öğenin yazı rengini kırmızı yapar. */
 }
 
-/*5- torun seçiciler : descendant selector   torun seçicisi olarak kullanılır. bir elementin içinde bulunan diğer elementleri seçmek için kullanılır. */
-div li {
-    color: purple;
-    background-color: pink;
-    font-family: 'Lucida Handwriting', cursive;
+/* 4. Evrensel seçici */    /* Tüm elementleri seçmek için kullanılır */
+* {
+    font-family: 'Times New Roman', Times, serif; /* Tüm öğelerin varsayılan yazı tipini belirler. */
+    margin: 0; /* Tüm öğelerin dış boşluklarını sıfırlar (tarayıcı varsayılanlarını kaldırmak için). */
+    padding: 0; /* Tüm öğelerin iç boşluklarını sıfırlar. */
 }
 
-/*6- çocuk seçiciler : child selector   çocuk seçicisi olarak kullanılır. bir elementin sadece bir altındaki elementleri seçmek için kullanılır. */
+/* 5. Torun seçiciler */ /*birbirinin içine geçmiş spesifik elementi seçmek için kullanılır*/
+div p {
+    color: green; /* Bir `div` içinde bulunan tüm `p` öğelerinin yazı rengini yeşil yapar (descendant selector). */
+}
+
+/* 6. Çocuk (child) seçiciler */ /*birbirinin içine geçmiş elementlerden yazılan eğer varsa seçmek için kullanılır*/ 
 div > p {
-    color: orange;
-    background-color: lightblue;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-/*7- bitişik seçiciler : adjacent sibling selector   bitişik seçici olarak kullanılır. bir elementin hemen ardından gelen kardeş elementleri seçmek için kullanılır. */
-h2 + p {
-    color: brown;
-    background-color: lightgreen;
-    font-family: 'Georgia', serif;
+    background-color: aliceblue; /* `div`'in doğrudan çocukları olan `p` öğelerinin arka planını belirler. */
 }
 
-/*8- özellik seçiciler : attribute selector   özellik seçicisi olarak kullanılır. bir elementin belirli bir özelliğe sahip olup olmadığını kontrol etmek için kullanılır. */
-a[href] {
-    color: cyan;
-    background-color: black;
-    font-family: 'Times New Roman', Times, serif;
-}
-input[type="text"] {
-    color: magenta;
-    background-color: lightgray;
-    font-family: 'Arial Black', Gadget, sans-serif;
+/* 7. Bitişik seçiciler */ /*birbirini takip eden elementlerden yazılan eğer varsa seçmek için kullanılır*/
+p + p { background-color: yellow; /* Bir `p` öğesini hemen takip eden sonraki `p` öğesinin arka planını sarı yapar. */
 }
 
-ul li {list-style-type:  none;} /*liste işaretlerini kaldırmak için kullanılır.*/
-a link {text-decoration: none;} /*linklerin altını çizmek için kullanılır. none değeri ile altını çizmez.*/
+/* 8. Özellik seçiciler */ /*bir elementin belirli bir özelliğe sahip olanını seçmek için kullanılır*/
 
+a[href="https://www.google.com/"] /*href özelliği google olan a elementini seçer*/
+{
+    color: yellowgreen; /* Href değeri tam eşleşen linkin rengini ayarlar (tam eşleme). */
+}
+
+ul li{
+    list-style-type: none; /*liste işaretlerini kaldırır*/
+    margin: 10px; /*liste elemanları arasına boşluk ekler*/
+    float: left; /*liste elemanlarını yan yana dizer*/
+    background-color:aliceblue; /*liste elemanlarının arka plan rengini belirler*/
+}
+
+a:link {
+    text-decoration: none; /*linklerin altını kaldırır*/
+}
+
+a:hover {
+    color: orange; /*linklerin üzerine gelindiğinde rengini değiştirir*/
+}
+a:visited{
+    color:aquamarine; /*ziyaret edilen linklerin rengini değiştirir*/
+}
+a:active{
+    color:coral; /*tıklanan linklerin rengini değiştirir*/
+}
 #yeni{
-    color: yellow !important; /*important değeri ile bu stil diğer stillerden daha öncelikli olur. diğer stiller bu stili geçemez.*/
-    line-height :30px; /*satır yüksekliği*/
-    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    font-style: italic; /*font stili*/
-    text-transform: uppercase; /*metni büyük harfe çevirir.*/
-    text-decoration: underline; /*metni altını çizer.*/
-    text-indent: 30px; /*metni içeri kaydırır.*/
-    text-align: center; /*metni ortalar.*/
-    vertical-align: middle; /*metni dikey olarak ortalar.*/
-    letter-spacing: 30px; /*harfler arasındaki boşluğu artırır.*/
-    text-shadow: 2px 2px 5px red; /*metne gölge ekler. ilk iki değer gölgenin x ve y eksenindeki kaymasını, üçüncü değer ise gölgenin bulanıklık yarıçapını belirtir. son değer ise gölgenin rengini belirtir.*/
-    
+    color:royalblue !important; /*bu elementin kuralını diğer tüm kurallardan üstün yapar, diğerlerinden önce bu yapılır*/
+    line-height: 30px; /*satır yüksekliğini belirler*/
+    font-family: 'Times New Roman', Times, serif; /*yazı tipini belirler, birden fazla girildiğinde kullanıcının bilgisayarındsa hangisi yüklüyse o görünür*/
+    font-size: 24px; /*yazı boyutunu belirler*/
+    font-style: italic; /*yazıyı italik yapar*/
+    text-transform: uppercase; /*yazıyı büyük harfe çevirir*/
+    text-decoration: line-through; /*yazının üstünü çizer*/
+    text-align: center; /*yazıyı ortalar*/
+    text-indent: 30px; /*paragrafın ilk satırını içeri kaydırır*/
+    vertical-align: middle; /*elementin dikeyde ortalanmasını sağlar*/
+    letter-spacing: 2px; /*harfler arasına boşluk ekler*/
+    text-shadow: 2px 2px 5px gray; /*yazıya gölge efekti verir, ilk iki değer gölgenin x ve y eksenindeki kaymasını, üçüncü değer ise gölgenin bulanıklığını belirler*/
 }
 html{
-    background-color: lightgray;
+    background-color: aliceblue; /*sayfanın arka plan rengini belirler*/
 }
 body{
-    background-image: url(/img/resim.jpg) lightblue;
-    min-height: 1200px; /*minimum yükseklik*/
-    background-repeat: no-repeat; /*arka plan resminin tekrarlanmasını engeller.*/
-    background-attachment: fixed; /*arka plan resminin sayfa kaydırıldığında hareket etmesini engeller.*/
-    background-position: center; /*arka plan resminin konumunu belirler. center değeri ile resim sayfanın ortasına yerleştirilir.*/
-
+    background-image: url('arkaplan.jpeg'); /*sayfanın arka planına resim ekler (dosya aynı klasördeyse)*/
+    background-size: cover; /*arka plan resminin sayfayı tamamen kaplamasını sağlar*/   
+    min-height: 100vh; /*sayfanın minimum yüksekliğini belirler, 100vh sayfanın tamamını kaplar*/
+    background-repeat: no-repeat; /*arka plan resminin tekrarlanmasını engeller*/
+    background-attachment: fixed; /*arka plan resminin sayfa kaydırıldığında hareket etmesini engeller, scroll denirse kaydırdıkça devam eder*/
+    background-position: center; /*arka plan resminin konumunu belirler, center sayfanın ortasına yerleştirir*/
+    text-align: center; /* Body içindeki inline metinleri yatay ortalar; blok elementleri etkilemez. */
 }
-/*Css kutu modeli: margin ve padding model
-margin: d1Ş boşluk elementin dışındaki boşlukları belirler. margin-top, margin-right, margin-bottom, margin-left şeklinde tek tek de tanımlanabilir.
-padding: iç boşlık elementin içindeki boşlukları belirler. padding-top, padding-right, padding-bottom, padding-left şeklinde tek tek de tanımlanabilir.*/
+/*CSS kutu modeli - box model, margin, border, padding, content*/
+/*margin: elementin dışındaki boşluk
+border: elementin etrafındaki çizgi
+padding: elementin içindeki boşluk, dışarıya doğru genişleme
+content: elementin içeriği*/
+
+html{
+    /*html etiketinin default özelliklerini vardır, bunları değiştirebiliriz*/
+    margin: 0 auto; /* HTML kökünde yatayda otomatik boşluk; genelde container için kullanılır, root'ta çoğunlukla `0` tercih edilir. */
+    padding: 0; /* HTML kök elementinin iç boşluğunu sıfırlar. */
+}
 
 #box{
-    background-color: aliceblue;
+    background-color: lightgreen; /*hiç bir şey yazılmamış hali*/
 }
 #box2{
     background-color: lightcoral;
-    margin: 20px 120px 20px 120px; /*elementin dışındaki boşlukları belirler. tüm kenarlar için geçerlidir.*/
-    margin-top: 120px; /*elementin üstündeki boşluğu belirler.*/
-    margin-right: 120px; /*elementin sağındaki boşluğu belirler.*/
-    margin-bottom: 120px; /*elementin altındaki boşluğu belirler.*/
-    margin-left: 120px; /*elementin solundaki boşluğu belirler.
-        padding: 20px 120px 20px 120px; /*elementin içindeki boşlukları belirler. tüm kenarlar için geçerlidir.*/
-}
-#box3{
-    background-color: lightseagreen;
-    
-}
+    margin: 20px 5px 10px 20px; /*box2'nin etrafına sırasıyla üstten 20px, sağdan 5px, alttan 10px, soldan 20px boşluk ekler*/
+    /*margin-top: 20px; margin-right: 5px; margin-bottom: 10px; margin-left: 20px; şeklinde de yazılabilir*/
 
-
-html{
-margin: 0; /*tarayıcıların varsayılan olarak eklediği boşlukları kaldırmak için kullanılır.*/
-padding: 0; /*tarayıcıların varsayılan olarak eklediği boşlukları kaldırmak için kullanılır.*/
-}
-
-#box{
-background-color: aliceblue;
-padding:20px;
-
-}
-#box2{
-background-color: lightcoral;
-float: left;
-margin-left: 20px; /*elementin sol tarafa yaslanmasını sağlar. float: right; ise elementin sağ tarafa yaslanmasını sağlar. float: none; ise elementin normal akışına devam etmesini sağlar.*/
-}
-
-
-div{
-    background-color: lightseagreen;
-    width: 200px; /*elementin genişliğini belirler.*/
-    height: 200px; /*elementin yüksekliğini belirler.*/
-    border-radius: 15px 0px 15px 0px; /*elementin köşelerini yuvarlatır. 15px değeri ile köşeler 15 piksel yarıçapında yuvarlatılır.*/
-
+    border: 2px solid black; /*box2'nin etrafına 2px kalınlığında siyah bir çizgi ekler*/
+    border-radius: 15px; /*box2'nin köşelerini 15px yarıçapında yuvarlatır*/
+    padding: 10px; /*box2'nin içindeki içeriğin etrafına 10px boşluk ekler*/
+    /*float: left; box2'yi sola hizalar, diğer elementlerin yanına gelmesini sağlar*/
+    /*margin-left: 50px; box2'nin sol tarafına 50px boşluk ekler, float ile birlikte kullanıldığında box2'yi sağa kaydırır*/
 }
 
 #flex_kutu{
     display: flex;
-    justify-content: center; /*flex container içindeki elemanların yatay olarak ortalanmasını sağlar. flex-start değeri ile elemanlar sola hizalanır. flex-end değeri ile elemanlar sağa hizalanır. space-between değeri ile elemanlar arasında eşit boşluk bırakılır. space-around değeri ile elemanlar arasında eşit boşluk bırakılır ve kenarlara da boşluk bırakılır.*/
-    align-items: center; /*flex container içindeki elemanların dikey olarak ortalanmasını sağlar. flex-start değeri ile elemanlar üst hizalanır. flex-end değeri ile elemanlar alt hizalanır. stretch değeri ile elemanlar container'ın yüksekliğine kadar uzatılır.*/
-
-    border : 2px solid black;
-    flex-direction: row; /*flex container içindeki elemanların yönünü belirler. row değeri ile elemanlar yatay olarak sıralanır. column değeri ile elemanlar dikey olarak sıralanır.*/
+    width: auto;
+    height: auto;
+    display: flex; /* Flex konteyner oluşturur; çocukları flex item olur. */
+    justify-content: center; /* Flex öğelerini yatayda ortalar. */
+    align-items: center; /* Flex öğelerini dikeyde ortalar. */
+    border: 2px solid silver; /* Konteynere kenarlık ekler. */
 }
-.flex_kutulsr{
-    background-color: lightcoral;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-}
-
-.alt_kutulsr{
-    background-color: lightseagreen;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+.alt_kutu{
+    margin: 10px; /* `.alt_kutu` elemanlarına çevresel boşluk ekler. */
 }
